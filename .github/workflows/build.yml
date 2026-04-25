@@ -1,4 +1,4 @@
-name: Build APK
+ Build APK
 
 on:
   push:
@@ -18,10 +18,7 @@ jobs:
 
       - name: Build APK
         run: |
-          buildozer init || true
-          buildozer -v android debug
-
-      - name: Upload APK
+          buildozer init || tru
         uses: actions/upload-artifact@v3
         with:
           name: apk
